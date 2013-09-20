@@ -1,0 +1,5 @@
+main-class=net.larry1123.
+name=Horses
+author=Larry1123
+version=[name]
+dependencies=CanaryUtil
