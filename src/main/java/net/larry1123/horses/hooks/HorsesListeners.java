@@ -43,11 +43,14 @@ public class HorsesListeners implements PluginListener {
         // TODO
     }
 
+    @HookHandler
     public void entitySpawn(EntitySpawnHook hook) {
         Entity entity = hook.getEntity();
         if (entity.getEntityType().equals(EntityType.ZOMBIE)) {
             Zombie zombie = (Zombie) entity;
             Horse horse = (Horse) Canary.factory().getEntityFactory().newEntity(EntityType.ZOMBIEHORSE, zombie.getLocation());
+            horse.setTamed(true);
+            horse.setOwner(zombie);
             horse.setRider(zombie);
         }
     }

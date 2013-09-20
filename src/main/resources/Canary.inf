@@ -1,5 +1,5 @@
 main-class=net.larry1123.horses.HorsesPlugin
 name=Horses
 author=Larry1123
-version=[name]
+version=[version]
 dependencies=CanaryUtil
